@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS -->
+    <link
+      href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.6.2/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      body {
+        background-color: #111730;
+      }
+      a.nav-link {
+        color: white;
+      }
+      .item {
+        padding: 10px;
+      }
+      .elementor-element {
+        border-bottom: 1px solid;
+        border-left: 0;
+        border-right: 0;
+        border-top: 0;
+        border-image: linear-gradient(#0072ce, #e540ff) 30;
+        padding-bottom: 38px;
+        margin-bottom: 36px;
+        border-image-source: linear-gradient(90deg, #0072ce 0%, #e540ff 100%);
+      }
+      /* .item > img {
+        width: 70%;
+        height: auto;
+      } */
+    </style>
+    <!-- jQuery and JavaScript Bundle with Popper -->
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.4/jquery.slim.min.js"></script>
+
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.6.2/js/bootstrap.bundle.min.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="#">XXXX</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#"
+                >Home <span class="sr-only">(current)</span></a
+              >
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li> -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Products
+              </a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#second">second</a>
+                <a class="dropdown-item" href="#third">third</a>
+
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input
+              class="form-control mr-sm-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </nav>
+      <div class="row" style="margin-top: 50px">
+        <div class="col-sm">
+          <h1 class="text-light">Your Web3 project starts here</h1>
+          <h3 class="text-light">
+            XXXX is the leading global Web3 on-and-off ramp solution.
+          </h3>
+          <p class="text-light">
+            We provide a global fiat-to-crypto gateway solution for wallets,
+            exchanges and other cryptocurrency businesses.
+          </p>
+          <button type="button" class="btn btn-primary btn-lg">
+            Speak to us today
+          </button>
+        </div>
+        <div class="col-sm" style="text-align: center">
+          <h2 class="text-light mb-4">Buy digital assets now</h2>
+
+          <div
+            class="btn-group btn-group-lg mb-5"
+            role="group"
+            aria-label="Basic example"
+          >
+            <button
+              type="button"
+              class="btn btn-info"
+              data-toggle="collapse"
+              id="buy-btn"
+              aria-expanded="false"
+            >
+              Buy coins
+            </button>
+            <button
+              type="button"
+              class="btn btn-info"
+              id="sell-btn"
+              data-toggle="collapse"
+              aria-expanded="false"
+            >
+              Sell coins
+            </button>
+          </div>
+
+          <div>
+            <div class="float-right" style="min-height: 120px">
+              <div class="collapse width" id="buy">
+                <div class="card card-body" style="width: 500px">
+                  <form class="needs-validation" novalidate>
+                    <div class="form-row">
+                      <div class="col-md-8 mb-3">
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="validationTooltip01"
+                          value=""
+                          required
+                          placeholder="Spend amount"
+                        />
+                      </div>
+                      <div class="col-md-4 mb-3">
+                        <select
+                          class="custom-select"
+                          id="validationTooltip04"
+                          required
+                        >
+                          <option selected>USD</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="col-md-8 mb-3">
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="validationTooltip01"
+                          value=""
+                          required
+                          placeholder="Receive amount"
+                        />
+                      </div>
+                      <div class="col-md-4 mb-3">
+                        <select
+                          class="custom-select"
+                          id="validationTooltip04"
+                          required
+                        >
+                          <option selected>BTC</option>
+                          <option>ETH</option>
+                          <option>USDT</option>
+                        </select>
+                      </div>
+                    </div>
+                  </form>
+                  <button type="button" class="btn btn-info">
+                    create order
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="float-right" style="min-height: 120px">
+              <div class="collapse width" id="sell">
+                <div class="card card-body" style="width: 500px">
+                  <form class="needs-validation" novalidate>
+                    <div class="form-row">
+                      <div class="col-md-8 mb-3">
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="validationTooltip01"
+                          value=""
+                          required
+                          placeholder="Sell amount"
+                        />
+                      </div>
+                      <div class="col-md-4 mb-3">
+                        <select
+                          class="custom-select"
+                          id="validationTooltip04"
+                          required
+                        >
+                          <option selected>BTC</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="col-md-8 mb-3">
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="validationTooltip01"
+                          value=""
+                          required
+                          placeholder="Receive amount"
+                        />
+                      </div>
+                      <div class="col-md-4 mb-3">
+                        <select
+                          class="custom-select"
+                          id="validationTooltip04"
+                          required
+                        >
+                          <option selected>AUD</option>
+                        </select>
+                      </div>
+                    </div>
+                  </form>
+                  <button type="button" class="btn btn-info">
+                    create order
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="second" class="row" style="margin-top: 100px">
+        <div class="col-sm">
+          <div class="line" style="display: flex; padding-left: 20px">
+            <div class="item">
+              <img
+                width="105"
+                src="https://banxa.com/wp-content/uploads/2022/02/Mastercard-1.svg"
+                alt=""
+              />
+            </div>
+            <div class="item">
+              <img
+                width="105"
+                src="https://banxa.com/wp-content/uploads/2022/02/Group-5872.svg"
+                alt=""
+              />
+            </div>
+            <div class="item">
+              <img
+                width="105"
+                src="https://banxa.com/wp-content/uploads/2022/02/SEPA.svg"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="line" style="display: flex; padding-left: 10px">
+            <div class="item">
+              <img
+                width="105"
+                alt=""
+                src="https://banxa.com/wp-content/uploads/2022/02/ApplePay.svg"
+              />
+            </div>
+            <div class="item">
+              <img
+                width="105"
+                src="https://banxa.com/wp-content/uploads/2022/02/Interac.svg"
+                alt=""
+              />
+            </div>
+            <div class="item">
+              <img
+                width="105"
+                src="https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_300,h_210/https://banxa.com/wp-content/uploads/2022/05/wire.png"
+                alt=""
+              />
+            </div>
+            <div class="item">
+              <img
+                width="105"
+                src="https://banxa.com/wp-content/uploads/2022/02/Visa.svg"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="line" style="display: flex; padding-left: 35px">
+            <div class="item">
+              <img
+                width="105"
+                src="https://banxa.com/wp-content/uploads/2022/02/Ideal.svg"
+                alt=""
+              />
+            </div>
+            <div class="item">
+              <img
+                width="105"
+                src="https://banxa.com/wp-content/uploads/2022/02/Group-5871.svg"
+                alt=""
+              />
+            </div>
+            <div class="item">
+              <img
+                width="105"
+                src="https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_300,h_206/https://banxa.com/wp-content/uploads/2022/06/pix.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="line" style="display: flex">
+            <div class="item">
+              <img
+                width="105"
+                src="https://banxa.com/wp-content/uploads/2022/02/Group-5852.svg"
+                alt=""
+              />
+            </div>
+            <div class="item">
+              <img
+                width="105"
+                src="https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_300,h_206/https://banxa.com/wp-content/uploads/2022/05/google-pay.png"
+                alt=""
+              />
+            </div>
+            <div class="item">
+              <img
+                width="105"
+                src="https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_301,h_207/https://banxa.com/wp-content/uploads/2023/02/1Logo.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+        <div class="col-sm">
+          <h1 class="text-light text-right mt-5">Local payments,</h1>
+          <h1 class="text-light text-right">higher conversions,</h1>
+          <h1 class="text-light text-right">more customers</h1>
+          <p class="text-light text-right">
+            XXXXX offers more global and local payment options than any other
+            on-and-off-ramp solution resulting in conversion rates up to three
+            times higher than credit card only solutions.
+          </p>
+        </div>
+      </div>
+
+      <div id="third" class="row" style="margin-top: 100px">
+        <div class="col-sm">
+          <img
+            src="https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_800,h_405/https://banxa.com/wp-content/uploads/2022/06/map3-1024x518.png"
+            alt=""
+            srcset="
+              https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_1024/https://banxa.com/wp-content/uploads/2022/06/map3-1024x518.png 1024w,
+              https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_300/https://banxa.com/wp-content/uploads/2022/06/map3-300x152.png    300w,
+              https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_768/https://banxa.com/wp-content/uploads/2022/06/map3-768x388.png    768w,
+              https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_1536/https://banxa.com/wp-content/uploads/2022/06/map3-1536x777.png 1536w,
+              https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_1800/https://banxa.com/wp-content/uploads/2022/06/map3.png          1800w
+            "
+            sizes="(max-width: 800px) 100vw, 800px"
+          />
+        </div>
+        <div class="col-sm">
+          <h1 class="text-light">Onboard global audiences</h1>
+          <p class="text-muted">
+            With our extensive network of local payment solutions paired with
+            the associated crypto licences, XXXXX provides you with access to
+            the largest audience that drives the highest conversion rates.
+          </p>
+        </div>
+      </div>
+
+      <div class="footer" style="margin-top: 100px">
+        <div class="elementor-element"></div>
+        <div class="row">
+          <div class="col text-light">
+            Global Internet Ventures Pty Ltd Level 2, 2/6 Gwynne Street
+            Cremorne, Victoria 3121 Australia
+          </div>
+          <div class="col text-light">
+            BNXA USA MTL Inc. (NMLS ID: 2347615) 1 East Liberty Street Suite
+            600, Office 16 Reno NV 89501 United States of America
+          </div>
+          <div class="col"></div>
+          <div class="col"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    $(document).ready(function () {
+      $("#buy").collapse("show");
+      $("#sell").collapse("hide");
+      $("#buy-btn").on("click", function () {
+        console.log("clicked");
+        $("#buy").collapse("show");
+        $("#sell").collapse("hide");
+      });
+
+      $("#sell-btn").on("click", function () {
+        console.log("clicked");
+        $("#sell").collapse("show");
+        $("#buy").collapse("hide");
+      });
+    });
+  </script>
+</html>
